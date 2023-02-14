@@ -8,4 +8,4 @@
 ## Treasure Island
 ![day03](https://user-images.githubusercontent.com/98851253/154304693-a3aa3a5a-e8f3-46b8-bcea-6f0884aad99c.gif)
 
-https://replit.com/@phillipra/treasure-island
+https://blog.naver.com/soboruuu88/222870607404
