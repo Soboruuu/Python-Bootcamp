@@ -6,6 +6,7 @@
 - Mathematical Operations in Python
 - Number Manipulation and F Strings in Python
 ## Tip Calculator
-![day02](https://user-images.githubusercontent.com/98851253/154178407-2fd555e2-2bdd-4a87-ad03-477e07cb307e.gif)
+[tc](https://user-images.githubusercontent.com/116648895/219223597-bf428f67-c70e-4655-a266-8e89ff5b0db6.gif)
+
 
 https://blog.naver.com/soboruuu88/222869553322
