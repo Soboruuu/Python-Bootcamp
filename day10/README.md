@@ -7,5 +7,6 @@
 - Print vs. Return
 - While Loops, Flags and Recursion
 ## Calculator
-![day10](https://user-images.githubusercontent.com/98851253/154529776-2a53b345-94bd-4a93-b1d5-a80830531055.gif)
+![calc](https://user-images.githubusercontent.com/116648895/219544651-593ab443-6b10-482e-8afa-95ef5c5095f7.gif)
+
 https://blog.naver.com/soboruuu88/222873967207
