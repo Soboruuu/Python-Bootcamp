@@ -5,5 +5,6 @@
 - Improving the User Experience
 -  How to Add ASCII Art and Improve the UI
 ## Hangman
-![day07](https://user-images.githubusercontent.com/98851253/154518650-6bf293ff-0f01-4014-9c10-70d17b2007ae.gif)
+![hangman](https://user-images.githubusercontent.com/116648895/219517126-ca01e0be-2aaa-4ec0-a7c2-586f6b971537.gif)
+
 https://blog.naver.com/soboruuu88/222872308008
