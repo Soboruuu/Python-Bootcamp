@@ -1,6 +1,7 @@
 # Create Desktop Watermarking App
 
 - Used Tkinter & PIL
+- Able to select & process multiple image files
 - Typing in watermark text
 - Options for watermark positions(Top-left, Top-right, Bottom-left, Bottom-right)
 - Options for watermark colors(black, white)
