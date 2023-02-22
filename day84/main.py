@@ -11,9 +11,16 @@ image_paths=""
 
 def browseFiles():
     global image_paths
-    image_paths = filedialog.askopenfilenames(initialdir= "/", title= "Select Image Files", filetypes= ((('png file', '*.png'),('jpg file', '*.jpg'),('jpeg file', '*jpeg'),('all file','*.*'))))
+    image_paths = filedialog.askopenfilenames(initialdir= "/",
+                                              title= "Select Image Files",
+                                              filetypes= ((('png file', '*.png'),
+                                                          ('jpg file', '*.jpg'),
+                                                          ('jpeg file', '*jpeg'),
+                                                          ('all file','*.*'))))
 
-    # Display Selected image on the UI. If multiple images are selected, display the first one.
+    # Display Selected image on the UI.
+    # If multiple images are selected, display the first one.
+
     image= Image.open(image_paths[0])
     image.thumbnail((200,200))
     photo= ImageTk.PhotoImage(image)
@@ -22,8 +29,6 @@ def browseFiles():
 
 
 def addWatermark():
-    global image_paths
-
     # Display Error message if image is not selected.
     if not image_paths:
         messagebox.showwarning("Error", "Please select at least one image.")
@@ -39,13 +44,14 @@ def addWatermark():
     for image_path in image_paths:
         image=Image.open(image_path).convert("RGBA")
 
-        # Create transparent empty image canvases for watermark texts. The canvases are same in their size with original images.
+        # Create transparent empty image canvases for watermark texts.
+        # The canvases are same in their size with original images.
         watermark_canvas=Image.new("RGBA", image.size, (255,255,255,0))
         draw=ImageDraw.Draw(watermark_canvas)
 
         # Calculate & Set watermark font sizes based on the sizes of the images
         w, h= image.size
-        x, y= int(w/3), int(h/3)
+        x, y= int(w/30), int(h/30)
         if x>y:
             font_size=y
         elif y>x:
@@ -54,7 +60,7 @@ def addWatermark():
             font_size=x
 
         # Set font style and size. Default arial.ttf in the root folder.
-        font= ImageFont.truetype("NotoSansKR-Light.otf", int(font_size / 10))
+        font= ImageFont.truetype("NotoSansKR-Light.otf", font_size)
 
         # Set watermark sizes & contents
         text_width, text_height = draw.textsize(watermrktxt_entry.get(), font=font)
@@ -71,7 +77,10 @@ def addWatermark():
             watermark_position = (w - text_width - 10, h - text_height - 10)
 
         # Insert watermark in set position.
-        draw.text(watermark_position, text=watermrktxt_entry.get(), fill=watermark_fontcolor, font=font)
+        draw.text(xy=watermark_position,
+                  text=watermrktxt_entry.get(),
+                  fill=watermark_fontcolor,
+                  font=font)
         watermarked_image=Image.alpha_composite(image,watermark_canvas)
 
         # Save watermarked images in original image path as 'original file name' + 'watermarked'
@@ -98,11 +107,8 @@ canvas.grid(row=0, column=0)
 image_label=Label(window, text="Images:")
 image_label.grid(row=0, column=0, rowspan=8, columnspan=1, padx=10, pady=10)
 
-# #2-1 Image file label. Display text "Image files".
-# imagefile_label=Label(window, text="Image Files")
-# imagefile_label.grid(row=0, column=2, columnspan=2)
 
-#2-2 Image Search button. Open file browser window.
+#2 Image Search button. Open file browser window.
 imgsearch_btn = Button(text="Search Image Files", command=browseFiles)
 imgsearch_btn.grid(row=0, column=1, columnspan=2, padx=10)
 
@@ -115,7 +121,7 @@ watermrktxt_entry = Entry()
 watermrktxt_entry.insert(0, "Type Your Watermark Text")
 watermrktxt_entry.grid(row=2, column=1, columnspan=2, padx=10)
 
-#4-1 Watermark font color label. Display text "Watermark Font Color" 
+#4-1 Watermark font color label. Display text "Watermark Font Color"
 watermrkcolor_label = Label(window, text="Watermark Font Color")
 watermrkcolor_label.grid(row=3, column=1, columnspan=2, padx=10)
 
@@ -131,7 +137,7 @@ white_rb.grid(row=4, column=2, padx=10)
 watermrkpos_label = Label(window, text="Watermark Position")
 watermrkpos_label.grid(row=5, column=1, columnspan=2, padx=10)
 
-#5-2 Watermark position radio buttons(total 4). 
+#5-2 Watermark position radio buttons(total 4).
 position = IntVar(value=4)
 
 position_rb_nw = Radiobutton(window, text="Top-Left", variable=position, value=1)
