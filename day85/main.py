@@ -13,6 +13,11 @@ WORDCOUNT = 0
 START_TIME = 0
 timer = None
 
+with open("words.txt") as f:
+    word_list = []
+    for line in f:
+        word_list.append(line.strip())
+
 #-----DEF-----#
 
 def start_test():
