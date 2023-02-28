@@ -6,4 +6,5 @@
 - Calculate ball's collision with bricks
 
 
-![breakout](https://user-images.githubusercontent.com/116648895/221813964-c1fde2d0-a76b-470d-b3b6-15d3121d39b7.gif)
+![breakout](https://user-images.githubusercontent.com/116648895/221815603-74aaa417-02cf-411d-b674-8c93b2a61e00.gif)
+
