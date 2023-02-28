@@ -4,3 +4,6 @@
 - Delete surplus one paddle / Convert paddle's moving direction from vertical to horizontal.
 - Create Brick class
 - Calculate ball's collision with bricks
+
+
+![breakout](https://user-images.githubusercontent.com/116648895/221813964-c1fde2d0-a76b-470d-b3b6-15d3121d39b7.gif)
