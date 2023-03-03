@@ -1,8 +1,0 @@
-amazon / your@email.com / 1234555
-Coupang / your@email.com / 123123
-Naver / your@email.com / 123456777
-google / your@email.com / gmailgoogle123
-Aliexpress / your@email.com / 456456
-kakao / your@email.com / kakao123
-Amaazon / your@email.com / qwert
-Amaaazon / your@email.com / qweerty
