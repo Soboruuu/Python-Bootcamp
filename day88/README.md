@@ -1,4 +1,4 @@
-# Day 88 - To Do Agenda App
+# Day 88 - Todo list web app
 
 - Create a Web Server with Flask
 - Use the Command Line on Windows and Mac
