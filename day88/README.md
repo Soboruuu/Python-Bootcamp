@@ -16,3 +16,5 @@ Create a Python Decorator
 https://todo-list-xfpi.onrender.com/
 
 https://github.com/Soboruuu/todo-list
+
+https://blog.naver.com/soboruuu88/223037789273
