@@ -1,0 +1,51 @@
+
+/***** CSS Syntax 
+selector{property:value;} = who{what:how;}
+******/
+
+/* Tag Selector */
+body {
+    background-color: #F0EBCE;
+    }
+
+hr {
+    border-style: none;
+    border-bottom-style: dotted;
+    border-color: #CFB997;
+    border-width: 8px;
+    height: 10px;
+    width: 10%;
+    }
+
+img{
+    height: 200px; width: 200px;
+    background-color: white;
+    }
+
+h1{
+    color: #749F82;
+    }
+
+h3{
+    color:#749F82;
+    }
+
+/* Class Selector - You can set multiple elements as the same class names */
+
+.face:hover{
+    background-color:#395144;
+}
+
+.circular{
+    border-radius: 100%;
+}s
+
+.hey:hover{
+    background-color: #749F82;;
+}
+
+/* ID Selector - You can set only one ID for one elements */
+
+#heading{
+    color:#395144;
+}
