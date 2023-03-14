@@ -4,8 +4,8 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
 BILLBOARD_URL ="https://www.billboard.com/charts/hot-100/"
-SPOTIFY_CLIENT_ID="e285dc86581844b79816f4fbd7c001ec"
-SPOTIFY_CLIENT_SECRET="d72feda72992452fa1a5b440673fc3ce"
+SPOTIFY_CLIENT_ID="YOUR_SPOTIFY_CLIENT_ID"
+SPOTIFY_CLIENT_SECRET="YOUR_SPOTIFY_CLIENT_SECRET"
 SPOTIFY_REDIRECT_URI="http://example.com"
 
 # Get Billboard Top 100 songs from specific date #
