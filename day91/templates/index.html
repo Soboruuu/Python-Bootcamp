@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Extractor</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0-beta2/css/bootstrap.min.css"
+          integrity="sha384-DpXvgtA7Lx2xPFn6zAwY6UvYcNhuNQ+MRAO+WPYkXvE9l1z9zzTtmI2ZyJw2MlVU"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1 class="mb-5">Color Extractor</h1>
+    <form method="post" enctype="multipart/form-data" action="/result">
+        <div class="mb-3">
+            <label for="file" class="form-label">Upload an image</label>
+            <input type="file" name="file" id="file" accept=".jpg,.jpeg,.png" class="form-control" required>
+        </div>
+        <div id="preview" class="mb-3"></div>
+        <button type="submit" class="btn btn-primary">Extract colors</button>
+    </form>
+</div>
+
+<script>
+    function previewImage() {
+        const preview = document.getElementById('preview');
+        const file = document.getElementById('file').files[0];
+        const reader = new FileReader();
+
+        reader.onloadend = function () {
+            preview.innerHTML = '<img src="' + reader.result + '" style="max-width: 100%">';
+        }
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            preview.innerHTML = '';
+        }
+    }
+
+    document.getElementById('file').addEventListener('change', previewImage);
+</script>
+
+</body>
+</html>
