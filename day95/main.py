@@ -7,11 +7,12 @@ my_email = os.environ.get('EMAIL')
 password = os.environ.get('PASSWORD')
 
 service_key = os.environ.get('SERVICE_KEY')
+nx = os.environ.get('NX')
+ny = os.environ.get('NY')
 
 today = datetime.date.today().strftime('%Y%m%d')
 url = 'http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst'
-params ={'serviceKey' : service_key, 'pageNo' : '1', 'numOfRows' : '1000', 'dataType' : 'JSON', 'base_date' : today, 'base_time' : '0600', 'nx' : '61', 'ny' : '128' }
-
+params ={'serviceKey' : service_key, 'pageNo' : '1', 'numOfRows' : '1000', 'dataType' : 'JSON', 'base_date' : today, 'base_time' : '0600', 'nx' : nx, 'ny' : ny }
 response = requests.get(url, params=params)
 print(response.url)
 data = response.json()
