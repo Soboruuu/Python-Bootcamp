@@ -36,3 +36,5 @@ python3 -m flask run --port=4242
 ~~~
 
 3. Go to [http://localhost:4242/checkout.html](http://localhost:4242/checkout.html)
+
+https://blog.naver.com/soboruuu88/223064306754
