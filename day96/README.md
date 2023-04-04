@@ -7,9 +7,11 @@
 - Stripe API
 - Create sample page with Stripe API DOCS (https://stripe.com/docs/checkout/quickstart)
 - Go to [http://localhost:4242/checkout.html]
+------
 - Credit Card Numbers for TEST / Payment succeeds (4242 4242 4242 4242)
 - Credit Card Numbers for TEST / Payment requires authentication (4000 0025 0000 3155)
 - Credit Card Numbers for TEST / Payment is declined (4000 0000 0000 9995)
+-----
 
 ## An Online Shop
 
