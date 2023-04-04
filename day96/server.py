@@ -1,16 +1,8 @@
-#! /usr/bin/env python3.6
-
-"""
-server.py
-Stripe Sample.
-Python 3.6 or newer required.
-"""
 import os
 from flask import Flask, redirect, request
-
 import stripe
-# This is your test secret API key.
-stripe.api_key = 'sk_test_51MsaXXJN8I0Icj9PFK64RZxpjmIyWC3TeOluTxJEfpcXBtHUR2h2kQBpQEblrAHyQBlc6YFNWPHbfslnQMQVNAL2006o5qEO6F'
+
+stripe.api_key = os.environ.get('API_KEY')
 
 app = Flask(__name__,
             static_url_path='',
@@ -24,8 +16,7 @@ def create_checkout_session():
         checkout_session = stripe.checkout.Session.create(
             line_items=[
                 {
-                    # Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-                    'price': 'price_1MszDnJN8I0Icj9PJbJYOpd7',
+                    'price': os.environ.get('PRICE_ID'),
                     'quantity': 1,
                 },
             ],
