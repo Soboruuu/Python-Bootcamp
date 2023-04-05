@@ -1,6 +1,6 @@
 # Day 97 - Automated SMS
 ## Concepts Practised
-- Automatically collect weather data(OPEN WEATHER MAP) & stock news(ALPHA VANTAGE) data with their APIs.
+- Automatically collect weather data(OPEN WEATHER MAP) & stock prices(ALPHA VANTAGE) with their APIs.
 - Send SMS with TWILIO
 - Base on the lessons in day 35 & day 36, Create program work as OOP.
 
