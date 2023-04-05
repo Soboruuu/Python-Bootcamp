@@ -6,13 +6,13 @@ class Stock():
         self.STOCK = "AAPL"
         self.COMPANY_NAME = "Apple"
 
-# Alpha Vantage 주가정보 API
+        # Alpha Vantage 주가정보 API
         self.alpha_vantage_api_key=os.environ.get("ALPHA_VANTAGE_API_KEY")
         self.alpha_vantage_url= "https://www.alphavantage.co/query"
         self.alpha_vantage_parm= {"function":"TIME_SERIES_DAILY_ADJUSTED",
                              "symbol": self.STOCK,
                              "apikey": self.alpha_vantage_api_key}
-    #
+    
     def get_price(self):
         # 1. Alpha Vantage로 주가 정보 가져오기
         self.response = requests.get(url=self.alpha_vantage_url, params=self.alpha_vantage_parm)
