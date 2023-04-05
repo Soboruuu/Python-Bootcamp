@@ -24,7 +24,7 @@ class Stock():
         self.day_before_yesterday= [value for (key,value) in self.stock.items()][1]
         self.day_before_yesterday_closing = self.day_before_yesterday["4. close"]
 
-        # 2. 주가 정보 그제 대비 어제 증감율 알아보기(+5 % /-5 % 로 설정)
+        # 2. 주가 정보 그제 대비 어제 증감율 알아보기
         self.price_difference = float(self.yesterday_closing) - float(self.day_before_yesterday_closing)
         self.growth_rate = self.price_difference/float(self.yesterday_closing)
         self.percentage = round(self.growth_rate * 100,2)
